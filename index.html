@@ -4,47 +4,17 @@
 
         <title>rcorrie</title>
 
+        <link rel="stylesheet" type="text/css" href="dist/vendor.css" />
         <link rel="stylesheet" type="text/css" href="dist/app.css" />
 
     </head>
 
-    <body>
+    <body ng-app="Rcorrie" bg-color>
 
-        <div id="rc-splash">
-
-            <div id="rc-main-header">
-
-                <div id="rc-cube-container">
-                    <div class="cube">
-                        <span class="face a"></span>
-                        <span class="face b"></span>
-                        <span class="face c"></span>
-                        <span class="face d"></span>
-                    </div>
-                </div>
-
-                <h1 class="title">rcorrie</h1>
-                <h2 class="subtitle">software engineer</h2>
-
-                <div id="rc-splash-nav">
-
-                    <ul>
-                        <li>profile</li><li>resources</li><li>projects</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div id="rc-splash-footer">
-
-                <a href="http://www.github.com/rcorrie/" class="rc-icon-github"></a>
-
-            </div>
-
-        </div>
+        <div ui-view="app" id="rc-view" autoscroll class="animate-state-change"></div>
 
         <script src="dist/vendor.js"></script>
+        <script src="dist/templates.js"></script>
         <script src="dist/app.js"></script>
 
     </body>
