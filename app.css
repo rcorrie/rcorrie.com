@@ -65,8 +65,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes cubeSpinner {
   from {
-    transform: rotatex(64deg) rotatey(0deg); }
+    transform: rotatex(75deg) rotatey(0deg); }
   to {
-    transform: rotatex(64deg) rotatey(360deg); } }
+    transform: rotatex(75deg) rotatey(360deg); } }
 
 /*# sourceMappingURL=app.css.map */
