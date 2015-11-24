@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
+var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 var server = require('gulp-webserver');
 var runSequence = require('run-sequence');
@@ -44,7 +45,9 @@ gulp.task('copy-src-scss', function() {
 gulp.task('copy-src-ng', function() {
     return gulp.src('src/js/**/*.js')
     .pipe(ngAnnotate().on('error', error))
-    .pipe(gulp.dest('dist/js/'));
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('copy-src-img', function() {
