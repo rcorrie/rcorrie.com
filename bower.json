@@ -1,0 +1,19 @@
+{
+  "name": "rcorrie.com",
+  "homepage": "https://github.com/rcorrie/rcorrie.com",
+  "authors": [
+    "Ricardo Corrie <rcorrie90@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

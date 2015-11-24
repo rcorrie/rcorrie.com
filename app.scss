@@ -29,74 +29,109 @@ h1,h2,h3,h4,h5,h6 {
     position:relative;
     width:100vw;
     height:100vh;
+    min-height:740px;
 }
-    #rc-main-header{
-        text-align:center;
-        position:absolute;
-        top: 50%;
-        left:0; right:0;
-        margin-top:-50px;
+#rc-main-header{
+    text-align:center;
+    position:absolute;
+    top: 50%;
+    left:0; right:0;
+    margin-top:-50px;
 
-        .title, .subtitle{
-            margin: 0;
-        }
-        
-        .title{
-            font-size:3em;
-        }
-
-        .subtitle{
-            font-weight: lighter;
-            color: #77869A;
-            font-size: 1.1em;
-            font-family:$font;
-        }
+    .title, .subtitle{
+        margin: 0;
     }
 
-    #rc-cube-container{
-        perspective: 200px;
-        perspective-origin: 50% 50px;
+    .title{
+        font-size:3em;
+    }
+
+    .subtitle{
+        font-weight: lighter;
+        color: #77869A;
+        font-size: 1.1em;
+        font-family:$font;
+    }
+}
+
+#rc-cube-container{
+    perspective: 200px;
+    perspective-origin: 50% 50px;
+    position: relative;
+    .cube{
+        width: 100px;
+        height: 100px;
         position: relative;
-        .cube{
+        transform-style: preserve-3d;
+        margin: auto;
+        @include multibrowser(animation-name, cubeSpinner);
+        @include multibrowser(animation-timing-function, linear);
+        @include multibrowser(animation-duration, 10s);
+        @include multibrowser(animation-iteration-count, infinite);
+        .face{
+            display: block;
             width: 100px;
             height: 100px;
-            position: relative;
-            transform-style: preserve-3d;
-            margin: auto;
-            @include multibrowser(animation-name, cubeSpinner);
-            @include multibrowser(animation-timing-function, linear);
-            @include multibrowser(animation-duration, 10s);
-            @include multibrowser(animation-iteration-count, infinite);
-            .face{
-                display: block;
-                width: 100px;
-                height: 100px;
-                position: absolute;
-                border-radius: 100%;
-                box-shadow: 0 0 54px rgba(0,0,0,0.6);
-                background: rgba(42, 58, 80, 0.7);
-                box-shadow: inset 0 0 0 10px #FFFFFF;
-                &.a{
-                    transform: rotateY(135deg);
-                }
-                &.b{
-                    transform: rotateY(45deg);
-                }
-                &.c{
-                    transform: rotateY(90deg);
-                }
-                &.d{
-                    z-index: -1;
-                }
+            position: absolute;
+            border-radius: 100%;
+            box-shadow: 0 0 54px rgba(0,0,0,0.6);
+            background: rgba(42, 58, 80, 0.7);
+            box-shadow: inset 0 0 0 10px #FFFFFF;
+            &.a{
+                transform: rotateY(135deg);
+            }
+            &.b{
+                transform: rotateY(45deg);
+            }
+            &.c{
+                transform: rotateY(90deg);
+            }
+            &.d{
+                z-index: -1;
             }
         }
     }
+}
 
-    @keyframes cubeSpinner{
-        from{ transform: rotatex(75deg) rotatey(0deg) }
-        to{ transform: rotatex(75deg) rotatey(360deg) }
+#rc-splash-nav{
+    text-align: center;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    font-family: 'PT Mono';
+
+    ul{
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border: solid 2px #445265;
+        border-radius: 4px;
+        li:nth-child(2) {
+            border: solid 2px #445265;
+            border-width: 0 2px;
+        }
+        li{
+            cursor: pointer;
+            display: inline-block;
+            padding: 16px;
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+            @include multibrowser(transition, all 0.15s);
+        }
+        li:hover{
+            background: rgba(255,255,255,0.1);
+        }
     }
-    @-webkit-keyframes cubeSpinner{
-        from{ transform: rotatex(75deg) rotatey(0deg) }
-        to{ transform: rotatex(75deg) rotatey(360deg) }
-    }
+}
+
+@keyframes cubeSpinner{
+    from{ transform: rotatex(75deg) rotatey(0deg) }
+    to{ transform: rotatex(75deg) rotatey(360deg) }
+}
+@-webkit-keyframes cubeSpinner{
+    from{ transform: rotatex(75deg) rotatey(0deg) }
+    to{ transform: rotatex(75deg) rotatey(360deg) }
+}
