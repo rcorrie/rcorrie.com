@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans);
 
+@mixin multibrowser($prop, $val) {
+    -webkit-#{$prop}: $val;
+    -moz-#{$prop}: $val;
+    -ms-#{$prop}: $val;
+    -o-#{$prop}: $val;
+    #{$prop}: $val;
+}
+
 $headingFont: 'PT Mono', monaco, sans-serif;
 $font: 'PT Sans', sans-serif;
 
@@ -55,10 +63,10 @@ h1,h2,h3,h4,h5,h6 {
             position: relative;
             transform-style: preserve-3d;
             margin: auto;
-            animation-name: cubeSpinner;
-            animation-timing-function: linear;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
+            @include multibrowser(animation-name, cubeSpinner);
+            @include multibrowser(animation-timing-function, linear);
+            @include multibrowser(animation-duration, 10s);
+            @include multibrowser(animation-iteration-count, infinite);
             .face{
                 display: block;
                 width: 100px;
@@ -85,6 +93,10 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     @keyframes cubeSpinner{
+        from{ transform: rotatex(75deg) rotatey(0deg) }
+        to{ transform: rotatex(75deg) rotatey(360deg) }
+    }
+    @-webkit-keyframes cubeSpinner{
         from{ transform: rotatex(75deg) rotatey(0deg) }
         to{ transform: rotatex(75deg) rotatey(360deg) }
     }
