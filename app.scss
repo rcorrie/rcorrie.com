@@ -1,13 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans);
+
+$headingFont: 'PT Mono', monaco, sans-serif;
+$font: 'PT Sans', sans-serif;
+
 body{
     margin:0;
     padding:0;
     font-size:1em;
-    background:#111 url('img/rc-graph-bg.gif');
+    background:#2A3A50 url('img/rc-graph-bg.gif');
     color:#fff;
+    font-family:$font;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: monaco;
+    font-family: $headingFont;
     font-weight:normal;
 }
 
@@ -32,50 +38,53 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         .subtitle{
-            font-size:1em;
+            font-weight: lighter;
+            color: #77869A;
+            font-size: 1.1em;
+            font-family:$font;
         }
     }
 
-        #rc-cube-container{
-            perspective: 200px;
-            perspective-origin: 50% 50px;
+    #rc-cube-container{
+        perspective: 200px;
+        perspective-origin: 50% 50px;
+        position: relative;
+        .cube{
+            width: 100px;
+            height: 100px;
             position: relative;
-            .cube{
+            transform-style: preserve-3d;
+            margin: auto;
+            animation-name: cubeSpinner;
+            animation-timing-function: linear;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            .face{
+                display: block;
                 width: 100px;
                 height: 100px;
-                position: relative;
-                transform-style: preserve-3d;
-                margin: auto;
-                animation-name: cubeSpinner;
-                animation-timing-function: linear;
-                    animation-duration: 10s;
-                    animation-iteration-count: infinite;
-                .face{
-                    display: block;
-                    width: 100px;
-                    height: 100px;
-                    position: absolute;
-                    border-radius: 100%;
-                    box-shadow: 0 0 54px rgba(0,0,0,0.6);
-                    background: rgba(42, 58, 80, 0.7);
-                    box-shadow: inset 0 0 0 10px #FFFFFF;
-                    &.a{
-                        transform: rotateY(135deg);
-                    }
-                    &.b{
-                        transform: rotateY(45deg);
-                    }
-                    &.c{
-                        transform: rotateY(90deg);
-                    }
-                    &.d{
-                        z-index: -1;
-                    }
+                position: absolute;
+                border-radius: 100%;
+                box-shadow: 0 0 54px rgba(0,0,0,0.6);
+                background: rgba(42, 58, 80, 0.7);
+                box-shadow: inset 0 0 0 10px #FFFFFF;
+                &.a{
+                    transform: rotateY(135deg);
+                }
+                &.b{
+                    transform: rotateY(45deg);
+                }
+                &.c{
+                    transform: rotateY(90deg);
+                }
+                &.d{
+                    z-index: -1;
                 }
             }
         }
+    }
 
-@keyframes cubeSpinner{
-    from{ transform: rotatex(75deg) rotatey(0deg) }
-    to{ transform: rotatex(75deg) rotatey(360deg) }
-}
+    @keyframes cubeSpinner{
+        from{ transform: rotatex(75deg) rotatey(0deg) }
+        to{ transform: rotatex(75deg) rotatey(360deg) }
+    }
