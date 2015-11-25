@@ -5,11 +5,12 @@
     angular.module('Rcorrie')
     .directive( 'bgColor', function() {
 
-        var DEFAULT_COLOR = '#2A3A50';
+        var DEFAULT_COLOR = '#1185CC'; //blue
         var bgColorStateMap = {
             splash: DEFAULT_COLOR,
-            profile: '#2A6F4C',
-            projects: '#352A50'
+            profile: '#549600', //green
+            resources: '#C17F01', //orange
+            projects: '#7E3DC3' //purple
         };
 
         return {

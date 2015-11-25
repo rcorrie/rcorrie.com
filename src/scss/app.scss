@@ -19,10 +19,19 @@ body{
     color:#fff;
     font-family:$font;
     width:100vw;
+    min-width:720px;
     height:100vh;
     min-height:500px;
     overflow: hidden;
     @include multibrowser(transition, all 1s);
+}
+
+a{
+    color: #000;
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -33,7 +42,27 @@ h1,h2,h3,h4,h5,h6 {
 #rc-view{
     position: relative;
     height: 100vh;
-    overflow:scroll;
+}
+
+#rc-bg-shiner{
+    display: block;
+    height: 40vh;
+    position: fixed;
+    background: rgba(255,255,255,0.1);
+    bottom: -20px;
+    left: -100px;
+    right: -100px;
+    @include multibrowser(transform, rotateZ(-16deg));
+    &:after{
+        content: '';
+        height: 130vh;
+        position: fixed;
+        background: rgba(255,255,255,0.05);
+        bottom: -20px;
+        left: -100px;
+        right: -100px;
+        @include multibrowser(transform, rotateZ(-74deg));
+    }
 }
 
 .rc-sheet{
@@ -48,32 +77,63 @@ h1,h2,h3,h4,h5,h6 {
     right: 0;
     top: 100px;
     color:#555;
+    font-size:0.9em;
 }
 
-#rc-profile{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display:flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    .profile-content{
-        display: inline-block;
-        width: 55%;
-        padding:20px 0 20px 20px;
-        h1{ margin:0; }
+#rc-profile {
+
+    top: 50%;
+    margin-top:-200px;
+    height:412px;
+    a{
+        color: #639C1B;
     }
-    .profile-pic{
-        display:inline-block;
-        vertical-align:top;
-        width:45%;
-        height:100%;
-        background: #fff url('img/profile-pic.jpg') no-repeat bottom center;
-        background-size: 100% auto;;
-        box-shadow: inset 0px -20px 20px rgba(0,0,0,0.1);
+
+    .container{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display:flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .profile-content{
+            display: inline-block;
+            width: 60%;
+            h1{ margin:0; }
+            .header{
+                background: -webkit-linear-gradient(bottom, #eee, #fefefe);
+                padding: 15px;
+                position:relative;
+            }
+            .subtitle{
+                color:#888;
+                .hire-me{
+                    color:#bbb;
+                    font-style:italic;
+                }
+            }
+            .find-me{
+                margin: 10px 15px 0;
+                font-size: 1em;
+                border-bottom: dashed 1px #ddd;
+                padding: 0 0 10px;
+            }
+            p{
+                padding:0 15px;
+            }
+        }
+        .profile-pic{
+            display:inline-block;
+            vertical-align:top;
+            width:40%;
+            height:100%;
+            background: #fff url('img/profile-pic.jpg') no-repeat bottom center;
+            background-size: 100% auto;;
+        }
+
     }
 }
 
@@ -99,7 +159,7 @@ h1,h2,h3,h4,h5,h6 {
 
     .subtitle{
         font-weight: lighter;
-        color: #77869A;
+        color: #8DD4FF;
         font-size: 1.1em;
         font-family:$font;
     }
@@ -129,7 +189,7 @@ h1,h2,h3,h4,h5,h6 {
             position: absolute;
             border-radius: 100%;
             box-shadow: 0 0 54px rgba(0,0,0,0.6);
-            background: rgba(42, 58, 80, 0.7);
+            background: rgba(16, 130, 200, 0.76);
             box-shadow: inset 0 0 0 10px #FFFFFF;
             &.a{
                 transform: rotateY(135deg);
@@ -160,10 +220,10 @@ h1,h2,h3,h4,h5,h6 {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        border: solid 2px #445265;
+        border: solid 2px #82CDFA;
         border-radius: 4px;
         li:nth-child(2) {
-            border: solid 2px #445265;
+            border: solid 2px #82CDFA;
             border-width: 0 2px;
         }
         li{
@@ -181,7 +241,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-#rc-splash-footer{
+#rc-footer{
     position:absolute;
     bottom:0;
     left:0; right:0;
@@ -192,13 +252,42 @@ h1,h2,h3,h4,h5,h6 {
 .rc-icon-github{
     display:inline-block;
     background: url('img/github.png') no-repeat;
-    background-size:cover;
+    background-size:100%;
     width:35px;
     height:35px;
     opacity:0.5;
     @include multibrowser(transition, all 0.15s);
     &:hover{
         opacity:1;
+    }
+}
+
+.rc-icon-download{
+    &:after{
+        background: url(img/download.png) center no-repeat;
+        background-size: 100%;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        opacity: 0.5;
+        margin: 0 0 0 3px;
+    }
+}
+
+.rc-back{
+    position:absolute;
+    left:-60px;
+    top: 0;
+    bottom:0;
+    width: 60px;
+    display:block;
+    background:url('img/back.png') no-repeat center;
+    background-size:50%;
+    @include multibrowser(transition, all .3s linear);
+    &:hover{
+        background-position: left center;
     }
 }
 

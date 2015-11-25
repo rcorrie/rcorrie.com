@@ -18,10 +18,12 @@
 
     app.config( function( $stateProvider, $urlRouterProvider ) {
 
+        $urlRouterProvider.otherwise('/');
+
         $stateProvider
 
         .state('splash', {
-            url: '',
+            url: '/',
             views: {
                 'app': {
                     templateUrl: 'splash.html'
@@ -30,10 +32,28 @@
         })
 
         .state('profile', {
-            url: 'profile',
+            url: '/profile',
             views: {
                 'app': {
                     templateUrl: 'profile.html'
+                }
+            }
+        })
+
+        .state('resources', {
+            url: '/resources',
+            views: {
+                'app': {
+                    templateUrl: 'resources.html'
+                }
+            }
+        })
+
+        .state('projects', {
+            url: '/projects',
+            views: {
+                'app': {
+                    templateUrl: 'resources.html'
                 }
             }
         })
