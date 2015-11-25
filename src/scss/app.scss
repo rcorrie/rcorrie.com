@@ -175,6 +175,98 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+#rc-recent{
+
+    top: 50%;
+        margin-top: -217px;
+    height: 435px;
+    a{
+        color: #9D56E8;
+    }
+
+    .container{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display:flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .content{
+            display: inline-block;
+            width: 60%;
+            .project-title{
+                margin: 10px 15px 0;
+                font-size: 1.4em;
+                border-bottom: dashed 1px #ddd;
+                padding: 0 0 10px;
+                font-family: $font;
+                font-weight: bold;
+                display:block;
+                background-size: 20px;
+                position:relative;
+                &:before{
+                    content: '';
+                    display:inline-block;
+                    vertical-align:middle;
+                    background: url('img/lr-icon.png') center no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    background-size: auto 100%;
+                    margin-right: 10px;
+                    position: absolute;
+                    right: 15px;
+                    top: 3px;
+                }
+                &:after{
+                    background: url(img/apple-icon.png) center no-repeat;
+                    background-size: 100%;
+                    content: '';
+                    display:block;
+                    width: 20px;
+                    height: 20px;
+                    opacity: .5;
+                    margin: 0 0 0 3px;
+                    position: absolute;
+                    right: 0px;
+                    top: 2px;
+                }
+            }
+            p{
+                padding:0 15px;
+            }
+            .stack{
+                list-style-type: none;
+                padding: 10px 0;
+                border-top:dashed 1px #ddd; 
+                    padding: 10px 15px;
+                li{
+                        font-size: .8em;
+    color: #fff;
+    background: #9D56E8;
+    border-radius: 5px;
+    padding: 2px 7px;
+    display: inline-block;
+    margin: 2px;
+    border-bottom: solid 2px #7C32CC;
+    text-shadow: 0 2px #7C32CC;
+                }
+            }
+        }
+        .screenshot{
+            display:inline-block;
+            vertical-align:top;
+            width:40%;
+            height:100%;
+            background: #fff url('img/lr-screenshot.jpg') no-repeat top center;
+            background-size:cover;
+        }
+
+    }
+}
+
 #rc-profile {
 
     top: 50%;
@@ -355,6 +447,22 @@ h1,h2,h3,h4,h5,h6 {
         height: 10px;
         opacity: 0.5;
         margin: 0 0 0 3px;
+    }
+}
+
+.rc-home{
+    position:absolute;
+    left:50%;
+    top: -60px;
+    width: 60px;
+    height:60px;
+    margin-left:-30px;
+    display:block;
+    background:url('img/home.png') no-repeat center;
+    background-size:50%;
+    @include multibrowser(transition, all .3s linear);
+    &:hover{
+        background-position: center top;
     }
 }
 

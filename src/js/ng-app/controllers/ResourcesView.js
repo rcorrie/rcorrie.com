@@ -130,7 +130,7 @@
                         name: 'sass',
                         level: 9,
                         years: 2,
-                        keywords: 'css, stylesheets'
+                        keywords: 'css, scss, stylesheets'
                     },
                     {
                         name: 'mysql',
@@ -171,33 +171,38 @@
                     {
                         name: 'git',
                         level: 10,
-                        years: 2
+                        years: 2,
+                        keywords: 'source control, repository, versioning'
                     },
                     {
                         name: 'gulp',
                         level: 7,
-                        years: '<1'
+                        years: '<1',
+                        keywords: 'task manager'
                     },
                     {
                         name: 'grunt',
                         level: 10,
-                        years: 2
+                        years: 2,
+                        keywords: 'task manager'
                     },
                     {
                         name: 'karma',
                         level: 7,
-                        years: 1
+                        years: 1,
+                        keywords: 'unit testing, test runner'
                     },
                     {
                         name: 'vim',
                         level: 9,
-                        years: 5
+                        years: 5,
+                        keywords: 'text editor'
                     },
                     {
                         name: 'scrum',
                         level: 8,
                         years: 2,
-                        keywords: 'agile'
+                        keywords: 'process, product, agile'
                     }
                 ]
             }

@@ -9,7 +9,7 @@
         var bgColorStateMap = {
             splash: DEFAULT_COLOR,
             profile: '#549600', //green
-            resources: '#C17F01', //orange
+            resources: '#D66806', //orange
             projects: '#7E3DC3' //purple
         };
 

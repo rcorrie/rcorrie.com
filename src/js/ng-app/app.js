@@ -51,10 +51,10 @@
         })
 
         .state('projects', {
-            url: '/projects',
+            url: '/recent',
             views: {
                 'app': {
-                    templateUrl: 'resources.html'
+                    templateUrl: 'recent.html'
                 }
             }
         })

@@ -4,19 +4,22 @@
 
     angular.module( 'Rcorrie' )
 
-    .directive( 'rcGoBack', function( $state ) {
+    .directive( 'rcNav', function( $state ) {
 
-        //TODO make this actually work
-        //var prevState;
-
+        var backMap = [
+            'profile',
+            'resources',
+            'projects'
+        ]
         return {
             restrict: 'AE',
+            scope: {
+                rcNav: '@'
+            },
             link: function( $scope, element ) {
-                //$scope.$on('$stateChangeSuccess', function( e, toS, toP, fromS ) {
-                    //prevState = (prevState == fromS.name ? 'splash' : fromS.name);
-                //})
                 element.on('click', function() {
-                    $state.go('splash');
+                    var state = (backMap[backMap.indexOf($state.current.name) + parseInt($scope.rcNav)]) || (parseInt($scope.rcNav)>0?'profile':'projects');
+                    $state.go(state);
                 })
             }
         }
