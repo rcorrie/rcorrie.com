@@ -56,9 +56,9 @@
                     },
                     {
                         name: 'c++',
-                        level: 2,
+                        level: 1,
                         years: '<1',
-                        keywords: 'cpp, plus, languages'
+                        keywords: 'cpp, languages'
                     },
                     {
                         name: 'html',

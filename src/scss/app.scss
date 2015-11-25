@@ -260,8 +260,14 @@ h1,h2,h3,h4,h5,h6 {
             vertical-align:top;
             width:40%;
             height:100%;
-            background: #fff url('img/lr-screenshot.jpg') no-repeat top center;
+            background-position: top center;
             background-size:cover;
+            display: flex;
+            display:-webkit-flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
         }
 
     }
@@ -304,8 +310,14 @@ h1,h2,h3,h4,h5,h6 {
             vertical-align:top;
             width:40%;
             height:100%;
-            background: #fff url('img/profile-pic.jpg') no-repeat bottom center;
+            background-position: bottom center;
             background-size: 100% auto;;
+            display: flex;
+            display:-webkit-flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
         }
 
     }

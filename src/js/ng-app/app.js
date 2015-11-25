@@ -5,6 +5,7 @@
     var app = angular.module( 'Rcorrie', [
         'Rcorrie.templates',
         'Rcorrie.animations',
+        'rc.tidyImg',
         'ngAnimate',
         'ui.router',
         'anim-in-out'
