@@ -19,15 +19,21 @@
         }
     })
 
-    app.animation('.animate-pop', function() {
+    app.animation('.animate-list', function($timeout) {
         return {
-
+            enter: function( element, doneFn ) {
+                element.css({display:'none'});
+                $timeout( function() {
+                    element.css({display:'block'});
+                    element.addClass('animated fadeIn');
+                    doneFn();
+                }, 500 )
+            },
+            leave: function( element, doneFn ) {
+                element.addClass('animated fadeOut');
+                doneFn();
+            }
         }
     })
-
-    function animate( animation, element, done ) {
-        element.addClass('animated ' + animation);
-        setTimeout( done, 3000 );
-    }
 
 })();

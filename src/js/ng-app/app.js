@@ -44,7 +44,8 @@
             url: '/resources',
             views: {
                 'app': {
-                    templateUrl: 'resources.html'
+                    templateUrl: 'resources.html',
+                    controller: 'ResourcesViewCtrl'
                 }
             }
         })
