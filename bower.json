@@ -21,6 +21,6 @@
     "angular-ui-router": "ui-router#~0.2.15",
     "angular-ui-router-anim-in-out": "~1.0.2",
     "animate.css": "~3.4.0",
-    "angular-tidy-img": "~0.0.4"
+    "angular-tidy-img": "~0.0.5"
   }
 }
