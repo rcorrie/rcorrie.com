@@ -74,13 +74,13 @@
                     },
                     {
                         name: 'sql',
-                        level: 7,
+                        level: 8,
                         years: 3,
                         keywords: 'database, languages, data'
                     },
                     {
                         name: 'osx',
-                        level: 8,
+                        level: 9,
                         years: 4,
                         keywords: 'apple, mac, systems'
                     }
@@ -112,13 +112,13 @@
                         name: 'cordova',
                         level: 9,
                         years: 2,
-                        keywords: 'phonegap, native, ios, android, app'
+                        keywords: 'phonegap, native, ios, android, app, hybrid'
                     },
                     {
                         name: 'wordpress',
                         level: 8,
                         years: 3,
-                        keywords: 'cms, blog'
+                        keywords: 'cms, blog, php'
                     },
                     {
                         name: 'haml',
@@ -173,6 +173,12 @@
                         level: 10,
                         years: 2,
                         keywords: 'source control, repository, versioning'
+                    },
+                    {
+                        name: 'browserify',
+                        level: 7,
+                        years: 1,
+                        keywords: 'dependency management'
                     },
                     {
                         name: 'gulp',
