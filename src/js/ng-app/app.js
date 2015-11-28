@@ -7,8 +7,7 @@
         'Rcorrie.animations',
         'rc.tidyImg',
         'ngAnimate',
-        'ui.router',
-        'anim-in-out'
+        'ui.router'
     ] );
 
     app.run(function() {
