@@ -100,7 +100,7 @@
                         name: 'react',
                         level: 8,
                         years: 1.5,
-                        keywords: 'javascript, js, framework'
+                        keywords: 'javascript, js, jsx, html, views'
                     },
                     {
                         name: 'ruby on rails',
@@ -168,6 +168,18 @@
             {
                 category: 'tooling + misc',
                 items: [
+                    {
+                        name: 'MVC',
+                        level: 8,
+                        years: 2,
+                        keywords: 'architecture, design patterns'
+                    },
+                    {
+                        name: 'Flux',
+                        level: 5,
+                        years: 1,
+                        keywords: 'architecture, design patterns'
+                    },
                     {
                         name: 'git',
                         level: 10,
