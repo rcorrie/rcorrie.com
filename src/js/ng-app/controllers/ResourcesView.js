@@ -103,6 +103,12 @@
                         keywords: 'javascript, js, jsx, html, views'
                     },
                     {
+                        name: 'node.js',
+                        level: 4,
+                        years: '<1',
+                        keywords: 'nodejs, javascript, js'
+                    },
+                    {
                         name: 'ruby on rails',
                         level: 5,
                         years: '~1',
@@ -169,13 +175,13 @@
                 category: 'tooling + misc',
                 items: [
                     {
-                        name: 'MVC',
+                        name: 'mvc',
                         level: 8,
                         years: 2,
                         keywords: 'architecture, design patterns'
                     },
                     {
-                        name: 'Flux',
+                        name: 'flux',
                         level: 5,
                         years: 1,
                         keywords: 'architecture, design patterns'
@@ -185,6 +191,12 @@
                         level: 10,
                         years: 2,
                         keywords: 'source control, repository, versioning'
+                    },
+                    {
+                        name: 'subversion',
+                        level: 5,
+                        years: '<1',
+                        keywords: 'svn, source control, repository, versionng'
                     },
                     {
                         name: 'browserify',
